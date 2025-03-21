@@ -44,6 +44,8 @@ namespace PrimeiraAPI.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult Delete(int id)
         {
+            if(id == 0) return NotFound();
+
             return NoContent();
         }
     }
